@@ -1,8 +1,18 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
+const prettier = import("eslint-plugin-prettier");
 
-
-export default [
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
+module.exports = [
+  {
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: "module",
+    },
+    plugins: {
+      prettier,
+    },
+    rules: {
+      "prettier/prettier": "error",
+      semi: ["warn", "always"],
+    },
+  },
 ];
