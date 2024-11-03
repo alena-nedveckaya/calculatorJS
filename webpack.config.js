@@ -1,5 +1,9 @@
-const path = import('path');
-const HtmlWebpackPlugin = import('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default {
   entry: './src/index.js',
