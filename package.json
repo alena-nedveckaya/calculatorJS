@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "prepare": "husky",
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "pre-commit": "lint-staged"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +16,13 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "@eslint/js": "^9.13.0",
+    "@eslint/js": "^9.14.0",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
-    "eslint": "^9.13.0",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.11.0",
     "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.6",
@@ -30,13 +34,8 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "*.{js,jsx,json,css,scss}": [
       "prettier --write",
       "eslint --fix"
     ]

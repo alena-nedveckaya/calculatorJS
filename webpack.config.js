@@ -1,12 +1,12 @@
-const path = require('path'); // Импортируем модуль "path" для работы с путями файлов
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = import('path');
+const HtmlWebpackPlugin = import('html-webpack-plugin');
 
-module.exports = {
-  entry: ['webpack/hot/dev-server', './src/index.js'], // Точка входа для сборки проекта
-
+export default {
+  entry: './src/index.js',
   output: {
-    filename: 'bundle.js', // Имя выходного файла сборки
-    path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true, // Удаляет старый выходной каталог перед сборкой
   },
 
   module: {
@@ -17,8 +17,8 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.css$/, // Регулярное выражение для обработки файлов с расширением .css
-        use: ['style-loader', 'css-loader'], // Загрузчики, используемые для обработки CSS-файлов
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
@@ -31,11 +31,8 @@ module.exports = {
   ],
 
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'), // Каталог для статики
-    },
-    // open: true, // Автоматически открывать браузер
+    hot: true, // Включаем горячую перезагрузку
   },
 
-  mode: 'development', // Режим сборки
+  mode: 'development',
 };
