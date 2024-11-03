@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  <script defer src="./bundle.js"></script></head>
+  <body>
+    <div class="theme-toggle">
+      <input type="checkbox" id="themeToggle" />
+      <label for="themeToggle" class="toggle-label">
+        <span class="toggle-circle"></span>
+      </label>
+    </div>
+    <div class="calculator" id="calculator">
+      <input type="text" class="display" id="display" disabled value="0" />
+      <div class="buttons">
+        <button id="clearDisplay" class="function">AC</button>
+        <button id="toggleSign" class="function">±</button>
+        <button id="calculatePercentage" class="function">%</button>
+        <button class="operator appendOperator">/</button>
+        <button class="number appendNumber">7</button>
+        <button class="appendNumber">8</button>
+        <button class="appendNumber">9</button>
+        <button id="multiply" class="operator appendOperator">*</button>
+        <button class="appendNumber">4</button>
+        <button class="appendNumber">5</button>
+        <button class="appendNumber">6</button>
+        <button class="operator appendOperator">-</button>
+        <button class="appendNumber">1</button>
+        <button class="appendNumber">2</button>
+        <button class="appendNumber">3</button>
+        <button class="operator appendOperator">+</button>
+        <button class="bigButton appendNumber">0</button>
+        <button class="appendNumber">.</button>
+        <button class="operator" id="calculateResult">=</button>
+      </div>
+    </div>
+  </body>
+</html>
