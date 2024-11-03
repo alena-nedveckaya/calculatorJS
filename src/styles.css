@@ -125,25 +125,32 @@ input[type='checkbox']:checked + .toggle-label .toggle-circle {
 .light-theme .display {
   color: #333;
   background-color: #ffffff;
-  /* box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.1); */
 }
 
 .light-theme button {
-  /* background-color: #e0e0e0; */
   color: #333;
-  border: 1px solid #858585;
+  box-shadow: 0 0 0 1px #858585;
+  border: none;
 }
 
 .light-theme button:hover {
-  background-color: #eae9e9;
+  background-color: #e5e4e4;
+}
+
+.light-theme button:active {
+  background-color: #cecdcd;
 }
 
 .light-theme .function {
-  background-color: #dcdcdc;
+  background-color: #d4d2d2;
 }
 
 .light-theme .function:hover {
   background-color: #c1c1c1;
+}
+
+.light-theme .function:active {
+  background-color: #adadad;
 }
 
 .light-theme .operator {
@@ -153,6 +160,10 @@ input[type='checkbox']:checked + .toggle-label .toggle-circle {
 
 .light-theme .operator:hover {
   background-color: #e08900;
+}
+
+.light-theme .operator:active {
+  background-color: #c67a00;
 }
 
 /* Тёмная тема */
@@ -172,20 +183,28 @@ input[type='checkbox']:checked + .toggle-label .toggle-circle {
 .dark-theme button {
   background-color: #7d7d7d;
   color: #f9f9f9;
-  border: 1px solid #5b5b5b;
+  border: none;
+  box-shadow: 0 0 0 1px #5b5b5b;
 }
 
 .dark-theme button:hover {
   background-color: #666;
 }
 
+.dark-theme button:active {
+  background-color: #555555;
+}
+
 .dark-theme .function {
-  /* background-color: #555; */
   background-color: #d4d4d2;
 }
 
 .dark-theme .function:hover {
   background-color: #8c8c8c;
+}
+
+.dark-theme .function:active {
+  background-color: #797979;
 }
 
 .dark-theme .operator {
@@ -195,4 +214,8 @@ input[type='checkbox']:checked + .toggle-label .toggle-circle {
 
 .dark-theme .operator:hover {
   background-color: #e08900;
+}
+
+.dark-theme .operator:active {
+  background-color: #c07703;
 }
