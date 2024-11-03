@@ -151,16 +151,16 @@ function toggleSign() {
     return;
   }
   if (currentInput) {
-    currentInput = parseFloat(currentInput) * -1;
+    currentInput = floatNumber(parseFloat(currentInput) * -1);
     updateDisplay(currentInput);
   } else if (!currentInput && operand1) {
-    operand1 = parseFloat(operand1) * -1;
+    operand1 = floatNumber(parseFloat(operand1) * -1);
     updateDisplay(operand1);
   }
 }
 
 function updateDisplay(value) {
-  if (value.toString().length > 14) {
+  if (value.toString().length > 10) {
     document.getElementById('display').classList.add('smallResult');
   } else {
     document.getElementById('display').classList.remove('smallResult');
@@ -186,6 +186,16 @@ function resetCalculator(value) {
   currentInput = '';
 }
 
+function toggleTheme() {
+  document.body.classList.toggle('dark-theme');
+  document.body.classList.toggle('light-theme');
+}
+
+// Инициализация темы по умолчанию
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('dark-theme'); // Задаём темную тему по умолчанию
+});
+
 const numbers = document.getElementsByClassName('appendNumber');
 [...numbers].forEach((number) => {
   number.addEventListener('click', (e) => appendNumber(e.target.textContent));
@@ -202,3 +212,5 @@ document.getElementById('calculatePercentage').addEventListener('click', calcula
 document.getElementById('calculateResult').addEventListener('click', calculateResult);
 
 document.addEventListener('keydown', appendFromKeyboard);
+
+document.getElementById('themeToggle').addEventListener('click', toggleTheme);
