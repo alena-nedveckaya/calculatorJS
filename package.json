@@ -12,7 +12,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://alena-nedveckaya/calculatorJS",
+  "homepage": "https://github.com/alena-nedveckaya/calculatorJS.git",
   "keywords": [],
   "author": "",
   "license": "ISC",
