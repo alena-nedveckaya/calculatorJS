@@ -10,7 +10,8 @@ export default {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true, // Удаляет старый выходной каталог перед сборкой
+    clean: true, // Delete old files before building
+    publicPath: './', // This helps ensure relative paths for GitHub Pages
   },
 
   module: {

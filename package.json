@@ -8,8 +8,11 @@
     "build": "webpack",
     "prepare": "husky",
     "start": "webpack serve",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://alena-nedveckaya.github.io/your-repository-name",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,6 +27,7 @@
     "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "gh-pages": "^6.2.0",
     "globals": "^15.11.0",
     "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.6",
