@@ -10,6 +10,8 @@ let lastOperand = null;
 export function appendNumber(number) {
   if (number === '.' && !currentInput.includes('.')) {
     currentInput = currentInput === '' ? '0.' : currentInput + '.';
+  } else if (number === '.' && currentInput.includes('.')) {
+    return;
   } else if (currentInput === '0' && number !== '.') {
     currentInput = number;
   } else {
