@@ -91,8 +91,6 @@ export function calculatePercentage() {
   }
   let result;
 
-  // Преобразуем процент в десятичное число
-
   if (!operand1) {
     result = parseFloat(currentInput) / 100;
   } else if (operand1 && !currentInput) {
@@ -100,7 +98,6 @@ export function calculatePercentage() {
   } else {
     let percentValue = currentInput / 100;
 
-    // Выполняем операцию в зависимости от оператора
     switch (operator) {
       case '+':
         result = operand1 + operand1 * percentValue;

@@ -113,7 +113,7 @@ input[type='checkbox']:checked + .toggle-label .toggle-circle {
   transform: translateX(25px);
 }
 
-/* Светлая тема */
+/* Light theme */
 .light-theme .calculator {
   background-color: #f9f9f9;
 }
@@ -166,7 +166,7 @@ input[type='checkbox']:checked + .toggle-label .toggle-circle {
   background-color: #c67a00;
 }
 
-/* Тёмная тема */
+/* Dark theme */
 .dark-theme .calculator {
   background-color: #1c1c1c;
 }
