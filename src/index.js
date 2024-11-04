@@ -8,6 +8,7 @@ import {
   toggleSign,
   clearDisplay,
 } from './js/calculator/calculator.js';
+import { appendFromKeyboard } from './js/keyboard/keyboard.js';
 import { toggleTheme } from './js/calculator/theme.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,6 +24,8 @@ const operators = document.getElementsByClassName('appendOperator');
 [...operators].forEach((operator) => {
   operator.addEventListener('click', (e) => appendOperator(e.target.textContent));
 });
+
+document.addEventListener('keydown', appendFromKeyboard);
 
 document.getElementById('clearDisplay').addEventListener('click', clearDisplay);
 document.getElementById('toggleSign').addEventListener('click', toggleSign);
