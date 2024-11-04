@@ -2,6 +2,9 @@
 
 <h1>Calculator App</h1>
 
+<h3>Task</h3>
+<p>https://docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoaXSYrW8/edit?tab=t.0</p>
+
 <p>This is a simple calculator application built with JavaScript, HTML, and CSS. The app performs basic arithmetic operations and includes both light and dark themes. It uses Webpack as a module bundler and Babel for JavaScript transpilation.</p>
 
 <h2>Table of Contents</h2>
